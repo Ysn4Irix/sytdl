@@ -25,6 +25,7 @@
 			}
 		}
 
+		vars.error = ''
 		vars.loading = true
 
 		try {
@@ -32,23 +33,30 @@
 			if (res.ok) {
 				const { response } = await res.json()
 				const { thumbnail, title, dataFormats, urlId, format } = response
+				vars.error = ''
 				vars.loading = false
+
 				vars.thumbnail = thumbnail
 				vars.title = title
 				vars.format = format
 				vars.urlId = urlId
 				vars.dataFormats = dataFormats
-				console.log('🚀 ~ file: +page.svelte ~ line 36 ~ getVideo ~ dataFormats', dataFormats)
 			} else {
+				vars.error = ''
 				vars.loading = false
 				vars.error = 'Oops! Something went wrong, verify your url'
 			}
 		} catch {
+			vars.error = ''
 			vars.loading = false
 			vars.error = 'Oops! Something went wrong, verify your url'
 		}
 	}
 </script>
+
+<svelte:head>
+	<title>Sytdl</title>
+</svelte:head>
 
 <div class="justify-center text-center font-nunito">
 	<div class="flex flex-col">
