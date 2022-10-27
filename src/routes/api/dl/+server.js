@@ -7,10 +7,11 @@ import ytdl from 'youtube-dl-exec'
  */
 export const POST = async ({ request }) => {
 	const { url } = await request.json()
-	let video_id = url.split('v=')[1]
-	/* const ampersandPosition = video_id.indexOf('&')
-	if (ampersandPosition != -1) video_id = video_id.substring(0, ampersandPosition)
- */
+
+	let video_id
+	if (url.includes('youtu.be')) video_id = url.split('/')[3]
+	else video_id = url.split('v=')[1]
+
 	const response = await ytdl(
 		video_id,
 		{
