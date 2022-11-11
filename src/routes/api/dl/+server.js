@@ -23,7 +23,7 @@ export const POST = async ({ request }) => {
 			youtubeSkipDashManifest: true
 		},
 		{
-			input: '--format=bestvideo+bestaudio --sponsorblock-mark --sponsorblock-mark-remove'
+			input: '-f "bv+ba/b" --sponsorblock-mark --sponsorblock-mark-remove'
 		}
 	)
 
