@@ -29,6 +29,7 @@
 	},
 	"homepage": "https://github.com/Ysn4Irix/sytdl#readme",
 	"scripts": {
+		"start": "node ./build/index.js",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
