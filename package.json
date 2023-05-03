@@ -44,7 +44,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "^1.0.0-next.99",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.15.10",
 		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.18",
 		"prettier": "^2.6.2",
