@@ -39,7 +39,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
-		"daisyui": "^2.33.0",
+		"daisyui": "^3.5.1",
 		"youtube-dl-exec": "^2.1.6"
 	},
 	"devDependencies": {
